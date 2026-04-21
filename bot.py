@@ -53,7 +53,7 @@ async def poll_anthropic_research():
         )
 
         await channel.send(embed=embed)
-        await asyncio.sleep(1)
+        await asyncio.sleep(10)
 
 
 @tasks.loop(hours=12)
@@ -86,7 +86,7 @@ async def poll_nvidia_research():
         )
 
         await channel.send(embed=embed)
-        await asyncio.sleep(1)
+        await asyncio.sleep(10)
 
 
 @tasks.loop(hours=12)
@@ -119,7 +119,7 @@ async def poll_deepmind_research():
         )
 
         await channel.send(embed=embed)
-        await asyncio.sleep(1)
+        await asyncio.sleep(10)
 
 
 @client.event
