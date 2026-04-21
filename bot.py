@@ -101,12 +101,15 @@ async def poll_anthropic_research():
         print(f"Error fetching research: {e}")
         return
 
+    ANTHROPIC_LOGO = "https://cdn.prod.website-files.com/67ce28cfec624e2b733f8a52/681d52619fec35886a7f1a70_favicon.png"
+
     for article in new_articles:
         embed = discord.Embed(
             title=article["title"][:256],
             color=discord.Color.blurple(),
             url=article["url"],
         )
+        embed.set_author(name="Anthropic Research", icon_url=ANTHROPIC_LOGO)
         if article["date"]:
             embed.add_field(name="Date", value=article["date"], inline=True)
 
